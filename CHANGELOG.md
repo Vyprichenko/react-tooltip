@@ -1,3 +1,9 @@
+## 4.2.12 (https://github.com/Vyprichenko/react-tooltip/compare/v4.2.11...v4.2.12) (2021-01-13)
+
+### Bug Fixes
+
+    * improve bodyMode event target resolving (ac7b1cb (https://github.com/Vyprichenko/react-tooltip/commit/ac7b1cb543a0e6fe7e7087751ae860f906c8a066))
+
 ## [4.2.11](https://github.com/wwayne/react-tooltip/compare/v4.2.10...v4.2.11) (2020-11-22)
 
 
