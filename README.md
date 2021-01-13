@@ -102,6 +102,7 @@ Notes:
 | resizeHide       | null                  | Bool          | true, false                                                                                                                           | Hide the tooltip when resizing the window, default is true                                                                                                                                          |
 | wrapper          | null                  | String        | div, span                                                                                                                             | Selecting the wrapper element of the react tooltip, default is div                                                                                                                                  |
 | clickable        | null                  | Bool          | true, false                                                                                                                           | Enables tooltip to respond to mouse (or touch) events, default is false                                                                                                                             |
+| bodyMode         | null                  | Bool          | true, false                                                                                                                           | Enables delegated events listening, default is false                                                                                                                                                |
 
 ### Security Note
 
@@ -174,14 +175,14 @@ Same for empty children, if you don't want show the tooltip when the children is
 
 ### 3. Tooltip not binding to dynamic content
 
-When you render `<ReactTooltip>` ahead of dynamic content, and are using `data-for={id}` attributes 
-on new dynamic content, the tooltip will not register its event listener.  
+When you render `<ReactTooltip>` ahead of dynamic content, and are using `data-for={id}` attributes
+on new dynamic content, the tooltip will not register its event listener.
 
 For example, you render a generic tooltip in the root of your app, then load a list of content async.
 Elements in the list use the `data-for={id}` attribute to bind the tooltip on hover.
 Since the tooltip has already scanned for data-tip these new elements will not trigger.
 
-One workaround for this is to trigger `ReactTooltip.rebuild()` after the data load to scan for the attribute again, 
+One workaround for this is to trigger `ReactTooltip.rebuild()` after the data load to scan for the attribute again,
 to allow event wireup.
 
 #### Example
@@ -189,7 +190,7 @@ to allow event wireup.
 ```jsx
 <app>
   <ReactTooltip id="foo" />
-  <list/>
+  <list />
 </app>
 ```
 
