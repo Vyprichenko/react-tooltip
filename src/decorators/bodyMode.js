@@ -18,22 +18,23 @@ const makeProxy = e => {
 const bodyListener = function(callback, options, e) {
   const { respectEffect = false, customEvent = false } = options;
   const { id } = this.props;
+  const target = e.target.closest('[data-tip]');
 
-  const tip = e.target.getAttribute('data-tip') || null;
-  const forId = e.target.getAttribute('data-for') || null;
+  if (target == null) {
+    return;
+  }
 
-  const target = e.target;
   if (this.isCustomEvent(target) && !customEvent) {
     return;
   }
 
+  const forId = target.getAttribute('data-for') || null;
   const isTargetBelongsToTooltip =
     (id == null && forId == null) || forId === id;
 
   if (
-    tip != null &&
-    (!respectEffect || this.getEffect(target) === 'float') &&
-    isTargetBelongsToTooltip
+    isTargetBelongsToTooltip &&
+    (!respectEffect || this.getEffect(target) === 'float')
   ) {
     const proxy = makeProxy(e);
     proxy.currentTarget = target;
