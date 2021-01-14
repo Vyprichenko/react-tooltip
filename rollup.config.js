@@ -43,7 +43,7 @@ export default {
       plugins: [simplevars(), nested()],
       modules: true
     }),
-    sass({ insert: false }),
+    sass({ insert: true }),
     url(),
     svgr(),
     babel({
