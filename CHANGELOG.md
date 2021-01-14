@@ -1,3 +1,9 @@
+## 4.2.13 (https://github.com/Vyprichenko/react-tooltip/compare/v4.2.12...v4.2.13) (2021-01-14)
+
+### Bug Fixes
+
+    * styles: revert introduction of injectStyles method (a9d4d40 (https://github.com/Vyprichenko/react-tooltip/commit/a9d4d40c579a25d5f294262f314230246624b8eb))
+
 ## 4.2.12 (https://github.com/Vyprichenko/react-tooltip/compare/v4.2.11...v4.2.12) (2021-01-13)
 
 ### Bug Fixes
